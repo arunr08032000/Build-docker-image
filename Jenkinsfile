@@ -25,9 +25,9 @@ pipeline {
                 sh 'docker push arunr08032000/dockerhub-example:jenkins-project1'
             }
         }
-     Post {
+     post {
        always {
          sh 'docker logout'
        }
     }
- }
+}
