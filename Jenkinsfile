@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo docker build -t arunr08032000/alpine:latest .'
+                sh 'echo "arun" | sudo -S docker build -t arunr08032000/alpine:latest .'
             }
         }
     }
