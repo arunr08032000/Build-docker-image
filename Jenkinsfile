@@ -9,20 +9,5 @@ pipeline {
                 sh 'sudo docker build -t alpine:latest .'
             }
         }
-        stage('Login') {
-            steps {
-                sh 'echo "@Arunnura007" | docker login -u docker --password-stdin'
-            }
-        }
-        stage('Tag') {
-            steps {
-                sh 'docker tag alpine:latest arunr08032000/dockerhub-example:jenkins-project1'
-            }
-        }
-        stage('Push') {
-            steps {
-                sh 'docker push arunr08032000/dockerhub-example:jenkins-project1'
-            }
-        }
     }
 }
